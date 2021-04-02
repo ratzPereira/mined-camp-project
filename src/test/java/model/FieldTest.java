@@ -155,6 +155,5 @@ class FieldTest {
         field.open();
 
         assertTrue(neighbor22.isOpen() && neighbor11.isClosed());
-
     }
 }

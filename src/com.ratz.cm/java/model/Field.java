@@ -88,8 +88,45 @@ public class Field {
         minedField = true;
     }
 
+    boolean objectiveAcomplished(){
+
+        boolean revealedField = !minedField && openField;
+        boolean protectedField = minedField && markedField;
+
+        return revealedField || protectedField;
+    }
+
+    long mineInTheNeighborhood() {
+
+        //we check how many minedfields the neighborhood has
+        return neighbors.stream().filter(n -> n.minedField).count();
+    }
+
+    void restartGame() {
+        openField = false;
+        minedField = false;
+        markedField = false;
+    }
 
 
+    public String toString() {
+
+        if (markedField) {
+            return "X";
+
+        } else if (openField && minedField){
+            return "*";
+
+        } else if( openField && mineInTheNeighborhood() > 0) {
+            return Long.toString(mineInTheNeighborhood());
+
+        } else if(openField) {
+            return " ";
+
+        } else {
+            return "?";
+        }
+    }
 
 
 
@@ -106,4 +143,13 @@ public class Field {
     public boolean isClosed(){
         return !isOpen();
     }
+
+    public int getRow() {
+        return row;
+    }
+
+    public int getCol() {
+        return col;
+    }
+
 }
