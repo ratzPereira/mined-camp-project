@@ -1,6 +1,8 @@
 package model;
 
 
+import exceptions.ExplosionException;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -47,4 +49,61 @@ public class Field {
 
     }
 
+
+    void changeMark(){
+
+        if(!openField) {
+            markedField = !markedField;
+        }
+    }
+
+
+    boolean open() {
+
+        if(!openField && !markedField) {
+            openField = true;
+
+            if(minedField) {
+                throw new ExplosionException();
+            }
+
+            if(safeNeighbor()) {
+                neighbors.forEach(v -> v.open());
+            }
+            return true;
+        } else {
+
+            return false;
+        }
+    }
+
+
+    boolean safeNeighbor(){
+
+        return neighbors.stream().noneMatch(n ->n.minedField);
+    }
+
+    void mineField(){
+
+        minedField = true;
+    }
+
+
+
+
+
+
+
+    //getters
+    public boolean isMarked(){
+        return markedField;
+    }
+
+    public boolean isOpen(){
+        return openField;
+    }
+
+    public boolean isClosed(){
+        return !isOpen();
+    }
 }
