@@ -152,4 +152,7 @@ public class Field {
         return col;
     }
 
+    public boolean isMined() {
+        return minedField;
+    }
 }
