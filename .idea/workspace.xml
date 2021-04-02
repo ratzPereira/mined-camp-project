@@ -2,11 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="239e705c-4685-436e-ad20-ed648df91b75" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/com.ratz.cm/java/Game.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com.ratz.cm/java/view/Console.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com.ratz.cm/java/exceptions/QuitException.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com.ratz.cm/java/model/Field.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com.ratz.cm/java/model/Field.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com.ratz.cm/java/model/Table.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com.ratz.cm/java/model/Table.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com.ratz.cm/java/view/Console.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com.ratz.cm/java/view/Console.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -35,8 +35,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com.ratz.cm/java/model/Field.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="590">
-              <caret line="155" column="26" selection-start-line="155" selection-start-column="26" selection-end-line="155" selection-end-column="26" />
+            <state relative-caret-position="3220">
+              <caret line="164" column="5" lean-forward="true" selection-start-line="164" selection-start-column="5" selection-end-line="164" selection-end-column="5" />
               <folding>
                 <element signature="e#2417#2418#0" expanded="true" />
                 <element signature="e#2451#2452#0" expanded="true" />
@@ -48,6 +48,10 @@
                 <element signature="e#2908#2909#0" expanded="true" />
                 <element signature="e#2940#2941#0" expanded="true" />
                 <element signature="e#2972#2973#0" expanded="true" />
+                <element signature="e#3010#3011#0" expanded="true" />
+                <element signature="e#3043#3044#0" expanded="true" />
+                <element signature="e#3094#3095#0" expanded="true" />
+                <element signature="e#3136#3137#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -76,11 +80,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com.ratz.cm/java/model/Table.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="480">
-              <caret line="33" lean-forward="true" selection-start-line="33" selection-end-line="33" />
+            <state relative-caret-position="186">
+              <caret line="93" column="25" selection-start-line="93" selection-start-column="25" selection-end-line="93" selection-end-column="25" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -100,15 +104,23 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com.ratz.cm/java/view/Console.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="260">
-              <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
+            <state relative-caret-position="1326">
+              <caret line="75" column="39" lean-forward="true" selection-start-line="75" selection-start-column="39" selection-end-line="75" selection-end-column="39" />
               <folding>
-                <element signature="e#122#123#0" expanded="true" />
-                <element signature="e#156#157#0" expanded="true" />
+                <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com.ratz.cm/java/exceptions/QuitException.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="80">
+              <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
             </state>
           </provider>
         </entry>
@@ -138,10 +150,11 @@
         <option value="$PROJECT_DIR$/src/test/java/FieldTest.java" />
         <option value="$PROJECT_DIR$/src/com.ratz.cm/java/exceptions/ExplosionException.java" />
         <option value="$PROJECT_DIR$/src/test/java/model/FieldTest.java" />
-        <option value="$PROJECT_DIR$/src/com.ratz.cm/java/model/Field.java" />
-        <option value="$PROJECT_DIR$/src/com.ratz.cm/java/model/Table.java" />
-        <option value="$PROJECT_DIR$/src/com.ratz.cm/java/view/Console.java" />
         <option value="$PROJECT_DIR$/src/com.ratz.cm/java/Game.java" />
+        <option value="$PROJECT_DIR$/src/com.ratz.cm/java/exceptions/QuitException.java" />
+        <option value="$PROJECT_DIR$/src/com.ratz.cm/java/model/Field.java" />
+        <option value="$PROJECT_DIR$/src/com.ratz.cm/java/view/Console.java" />
+        <option value="$PROJECT_DIR$/src/com.ratz.cm/java/model/Table.java" />
       </list>
     </option>
   </component>
@@ -258,7 +271,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1617390105103" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1617398284726" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
   </component>
@@ -372,7 +385,7 @@
       <option name="presentableId" value="Default" />
       <updated>1617285138148</updated>
       <workItem from="1617285141713" duration="5742000" />
-      <workItem from="1617371027793" duration="12984000" />
+      <workItem from="1617371027793" duration="17165000" />
     </task>
     <servers />
   </component>
@@ -409,12 +422,13 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="18726000" />
+    <option name="totallyTimeSpent" value="22907000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1924307" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1924307" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -423,7 +437,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.28060672" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.24052005" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -483,10 +497,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/com.ratz.cm/java/exceptions/QuitException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com.ratz.cm/java/model/Field.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="590">
-          <caret line="155" column="26" selection-start-line="155" selection-start-column="26" selection-end-line="155" selection-end-column="26" />
+        <state relative-caret-position="3220">
+          <caret line="164" column="5" lean-forward="true" selection-start-line="164" selection-start-column="5" selection-end-line="164" selection-end-column="5" />
           <folding>
             <element signature="e#2417#2418#0" expanded="true" />
             <element signature="e#2451#2452#0" expanded="true" />
@@ -498,14 +519,18 @@
             <element signature="e#2908#2909#0" expanded="true" />
             <element signature="e#2940#2941#0" expanded="true" />
             <element signature="e#2972#2973#0" expanded="true" />
+            <element signature="e#3010#3011#0" expanded="true" />
+            <element signature="e#3043#3044#0" expanded="true" />
+            <element signature="e#3094#3095#0" expanded="true" />
+            <element signature="e#3136#3137#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com.ratz.cm/java/model/Table.java">
+    <entry file="file://$PROJECT_DIR$/src/com.ratz.cm/java/view/Console.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="33" lean-forward="true" selection-start-line="33" selection-end-line="33" />
+        <state relative-caret-position="1326">
+          <caret line="75" column="39" lean-forward="true" selection-start-line="75" selection-start-column="39" selection-end-line="75" selection-end-column="39" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -522,13 +547,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com.ratz.cm/java/view/Console.java">
+    <entry file="file://$PROJECT_DIR$/src/com.ratz.cm/java/model/Table.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
+        <state relative-caret-position="186">
+          <caret line="93" column="25" selection-start-line="93" selection-start-column="25" selection-end-line="93" selection-end-column="25" />
           <folding>
-            <element signature="e#122#123#0" expanded="true" />
-            <element signature="e#156#157#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>

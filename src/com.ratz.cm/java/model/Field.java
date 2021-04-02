@@ -155,4 +155,12 @@ public class Field {
     public boolean isMined() {
         return minedField;
     }
+
+    public boolean isMinedField() {
+        return minedField;
+    }
+
+    public void setOpenField(boolean openField) {
+        this.openField = openField;
+    }
 }

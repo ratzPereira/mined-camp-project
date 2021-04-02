@@ -1,5 +1,7 @@
 package model;
 
+import exceptions.ExplosionException;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.function.Predicate;
@@ -23,7 +25,15 @@ public class Table {
     }
 
     public void openField(int row, int col) {
-        fields.stream().filter(f -> f.getRow() == row && f.getCol() == col).findFirst().ifPresent(f ->f.open());
+
+        try {
+            fields.stream().filter(f -> f.getRow() == row && f.getCol() == col).findFirst().ifPresent(f ->f.open());
+
+        } catch (ExplosionException e) {
+            fields.forEach(f -> f.setOpenField(true));
+            throw e;
+        }
+
     }
 
     public void markField(int row, int col) {
@@ -56,9 +66,9 @@ public class Table {
 
 
         do {
-            minesInGame = fields.stream().filter(mined).count();
             int random =(int)(Math.random() * fields.size());
 
+            minesInGame = fields.stream().filter(mined).count();
             fields.get(random).mineField();
 
         } while (minesInGame < mines);
@@ -80,6 +90,15 @@ public class Table {
         StringBuilder sb = new StringBuilder();
 
         int i = 0;
+
+        sb.append(" ");
+        for (int j = 0; j < cols; j++) {
+            sb.append( " ");
+            sb.append(j);
+            sb.append( " ");
+        }
+
+        sb.append("\n");
 
         for (int r = 0; r < rows; r++) {
             sb.append(r);
